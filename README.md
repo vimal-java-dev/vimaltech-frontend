@@ -9,7 +9,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-success)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![License](https://img.shields.io/badge/License-MSME-green)
 
 </p>
 
@@ -340,7 +340,10 @@ git push -u origin feature/new-feature
 
 # 📄 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MSME License**.
+
+## ⚠️ Proprietary & Confidential Notice
+Copyright © 2025 Vimal Tech. All rights reserved. This software, including its user interface design, assets, and source code, is proprietary. Unauthorised copying, modification, redistribution, or commercial use of these files via any medium is strictly prohibited. Permitted viewing on GitHub is solely for evaluation purposes.
 
 ---
 
@@ -351,7 +354,7 @@ This project is licensed under the **MIT License**.
 Founder • Software Developer
 
 - 🌐 Website: https://vimaltech.dev
-- 💼 LinkedIn: https://linkedin.com/in/vimaltech
+- 💼 LinkedIn: https://www.linkedin.com/company/vimaltech-dev
 - 💻 GitHub: https://github.com/vimal-java-dev
 - 💻 GitHub: https://github.com/vimaltech-dev
 - 💻 GitHub: https://github.com/vimaltech-starter
