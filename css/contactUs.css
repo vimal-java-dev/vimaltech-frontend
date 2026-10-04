@@ -338,7 +338,7 @@ body.dark .udyam-box {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.7rem;
 }
 
 /* Base Input Styling - Unifies all fields to Dark Navy */

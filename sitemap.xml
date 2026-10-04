@@ -2,20 +2,12 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <!-- Home -->
+    <!-- Services as Home -->
     <url>
         <loc>https://vimaltech.dev/</loc>
-        <lastmod>2026-08-06</lastmod>
+        <lastmod>2026-10-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
-
-    <!-- Services -->
-    <url>
-        <loc>https://vimaltech.dev/services</loc>
-        <lastmod>2026-08-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
     </url>
 
     <!-- Portfolio -->
@@ -26,20 +18,12 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- Expertise -->
-    <url>
-        <loc>https://vimaltech.dev/expertise</loc>
-        <lastmod>2026-08-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
     <!-- About -->
     <url>
         <loc>https://vimaltech.dev/aboutUs</loc>
         <lastmod>2026-08-06</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
     <!-- Contact -->
@@ -47,7 +31,7 @@
         <loc>https://vimaltech.dev/contactUs</loc>
         <lastmod>2026-08-06</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
 
     <!-- FAQs -->

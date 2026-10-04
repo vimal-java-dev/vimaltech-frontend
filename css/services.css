@@ -67,7 +67,7 @@ body.dark .alt-bg {
 
 .service-card i {
     font-size: 1.5rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
     animation: iconBounce 2s infinite;
     display: inline-block;
     transition: transform 0.3s, color 0.3s;
@@ -119,7 +119,7 @@ body.dark .alt-bg {
 
 .accordion-item.active .accordion-icon {
     transform: rotate(45deg);
-    color: var(--color-accent);
+    color: var(--color-primary);
 }
 
 /* ===== FEATURES LIST (WHY WORK WITH ME) ===== */

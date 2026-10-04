@@ -1016,7 +1016,6 @@ body.dark .section-title {
 .footer-vimal-tech,
 .footer-vimal-patel,
 .footer-quick-links,
-.footer-resources,
 .footer-more-info {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0 30px;
@@ -1206,6 +1205,11 @@ body.dark .section-title {
     opacity: 0.7;
 }
 
+.footer-bottom a:hover {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
 /* ===== Mobile Responsive ===== */
 @media (max-width: 900px) {
     .footer-container {
@@ -1237,8 +1241,7 @@ body.dark .section-title {
         width: 100%;
     }
 
-    .footer-quick-links,
-    .footer-resources {
+    .footer-quick-links {
         padding: 20px 20px;
         width: 100%;
     }
@@ -1259,7 +1262,8 @@ body.dark .section-title {
     /* Bottom Bar */
     .footer-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.08);
-        margin-top: 40px;
+        margin-top: 20px;
+        margin-bottom: -20px;
         padding-top: 20px;
         text-align: center;
         font-size: 0.9rem;
@@ -1271,7 +1275,7 @@ body.dark .section-title {
 /* Forces the two divs to sit side-by-side (50% width each) */
 .footer-links-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
 }
 
 /* Optional: If you want them to stack on EXTREMELY small screens (like old foldables under 320px) */
@@ -1282,20 +1286,75 @@ body.dark .section-title {
     }
 }
 
+/* ===================================================
+   ===== MOBILE FOOTER LINKS LAYOUT =====
+   ===== Up to 768px =====
+=================================================== */
 @media (max-width: 768px) {
-    .footer-more-info .quick-links-list {
-        display: flex;
-        flex-wrap: wrap;
-        /* Allows links to wrap to the next line when space runs out */
-        gap: 10px;
-        /* Adds space between the links */
+
+    /* Footer content becomes a two-column grid */
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        align-items: start;
     }
 
-    /* Reset any 100% width on the list items */
+    /* Keep main footer sections full width */
+    .footer-vimal-tech,
+    .footer-vimal-patel {
+        grid-column: 1 / -1;
+    }
+
+    /* Quick Links - left column */
+    .footer-links-row {
+        grid-column: 1;
+        display: block;
+        width: 100%;
+        padding: 20px 15px 0 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-quick-links {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* More Info - right column */
+    .footer-more-info {
+        grid-column: 2;
+        width: 100%;
+        padding: 20px 10px 0 15px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* More Info links */
+    .footer-more-info .quick-links-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
     .footer-more-info .quick-links-list li {
         width: auto;
-        margin-bottom: 0;
-        /* Removes bottom margin if your default list has it */
+        margin-bottom: 8px;
+    }
+
+    /* Link typography */
+    .quick-links-list a {
+        font-size: 0.9rem;
+    }
+
+    /* Footer social stays full width */
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+
+    /* Footer bottom stays full width */
+    .footer-bottom {
+        grid-column: 1 / -1;
+        margin-bottom: -4px;
     }
 }
 
@@ -1413,42 +1472,39 @@ body.dark .section-title {
         border-bottom: none;
     }
 
-    /* Quick Links + Resources */
+    /* Quick Links Column */
     .footer-links-row {
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        grid-column: 1;
+        display: block;
         width: 100%;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
-        padding-top: 25px;
+        padding: 25px 20px 0 0;
     }
 
-    .footer-quick-links,
-    .footer-resources {
+    .footer-quick-links {
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
         border-left: none;
     }
 
-    /* More Info */
+    /* More Info Column */
     .footer-more-info {
-        grid-column: 1 / -1;
+        grid-column: 2;
         width: 100%;
-        padding: 25px 20px 0;
-        border-left: none;
+        padding: 25px 0 0 20px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
         border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    /* More Info Links in Rows */
+    /* More Info Links */
     .footer-more-info .quick-links-list {
         display: flex;
-        flex-wrap: wrap;
-        gap: 8px 25px;
+        flex-direction: column;
+        gap: 0;
     }
 
     .footer-more-info .quick-links-list li {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
 
     /* Typography */
@@ -1497,9 +1553,10 @@ body.dark .section-title {
 
     /* Footer Bottom */
     .footer-bottom {
-        margin-top: 30px;
-        margin-bottom: 0;
-        padding: 15px 10px;
+        grid-column: 1 / -1;
+        margin-top: 20px;
+        margin-bottom: 10px !important;
+        padding: 0px 10px;
     }
 }
 

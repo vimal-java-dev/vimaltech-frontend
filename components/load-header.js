@@ -34,7 +34,6 @@ fetch("/components/header.html")
         if (
           !cleanCurrent.includes("services") &&
           !cleanCurrent.includes("portfolio") &&
-          !cleanCurrent.includes("expertise") &&
           !cleanCurrent.includes("aboutus") &&
           !cleanCurrent.includes("contactus")
         ) {
