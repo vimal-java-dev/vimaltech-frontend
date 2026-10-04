@@ -65,7 +65,7 @@ body.dark .story-content p {
 
 .founder-icon {
     font-size: 1.5rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-right: 15px;
 }
 
@@ -183,7 +183,7 @@ body.dark .about-card:hover {
 
 .partner-icon {
     font-size: 2rem;
-    color: var(--color-accent);
+    color: var(--color-primary);
     margin-right: 25px;
     margin-top: 5px;
 }
