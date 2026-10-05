@@ -1,6 +1,6 @@
-# 🚀 Vimal Tech Portfolio
+# 🚀 Vimal Tech registered under MSME Micro, Small and Medium Enterprises.
 
-> A modern, responsive, and SEO-optimized developer portfolio built using **HTML5**, **CSS3**, and **JavaScript**. Designed to showcase professional services, frontend projects, technical expertise, and contact information with a clean user experience and modern web development practices.
+> A modern, responsive, and SEO-optimized Java Dev MSME Virtual Office built using **HTML5**, **CSS3**, and **JavaScript**. Designed to showcase professional services, frontend projects, technical expertise, and contact information with a clean user experience and modern web development practices.
 
 <p align="center">
 
@@ -17,11 +17,11 @@
 
 # 📖 Overview
 
-This repository contains the source code for my professional portfolio website.
+This repository contains the source code for Vimal Tech MSME registered as well as my professional portfolio website.
 
 The website is built with **vanilla HTML, CSS, and JavaScript**, focusing on performance, responsive design, accessibility, SEO, and maintainability. It highlights my professional experience, technical expertise, frontend projects, freelance services, and contact information through a modern and interactive user interface.
 
-The portfolio is designed to provide an excellent user experience across desktop, tablet, and mobile devices while following modern frontend development best practices.
+This Web Application is designed to provide an excellent user experience across desktop, tablet, and mobile devices while following modern frontend development best practices.
 
 ---
 
@@ -120,7 +120,7 @@ The portfolio is designed to provide an excellent user experience across desktop
 # 📂 Project Structure
 
 ```text
-portfolio-ui/
+vimaltech-frontend/
 │
 ├── .github/
 │   ├── workflows/
@@ -166,13 +166,13 @@ portfolio-ui/
 
 # 💼 Featured Projects
 
-The portfolio currently showcases several frontend applications built using different modern frontend frameworks.
+This Web application currently showcases several frontend applications built using different modern frontend frameworks.
 
 | Project | Technology |
 |----------|------------|
-| Alex Food Corner | React + Tailwind CSS + Vite |
-| Suman Enterprise | Vue.js + Vuetify |
-| Chai Makers | Angular |
+| Clinora Clinic | React + Tailwind CSS + Vite |
+| Foodaholic Bistro | Vue.js + Vuetify |
+| Fitness Freak | Angular |
 
 Each project includes:
 
@@ -246,25 +246,27 @@ This ensures that every contribution follows coding standards and repository sec
 
 # 🚀 Getting Started
 
-Clone the repository.
+## How i started!
+
+1. Clone the repository.
 
 ```bash
 git clone https://github.com/your-username/portfolio-ui.git
 ```
 
-Navigate into the project.
+2. Navigate into the project.
 
 ```bash
 cd portfolio-ui
 ```
 
-Open the project.
+3. Open the project.
 
 ```text
 Open index.html in your preferred web browser.
 ```
 
-Or use VS Code Live Server for local development.
+4. Or use VS Code Live Server for local development.
 
 ---
 
@@ -310,7 +312,7 @@ This project follows several frontend development best practices including:
 
 ---
 
-# 🤝 Contributing
+# 🤝 Contribution Simple Tips
 
 I do contribute with a feature branch as below.
 

@@ -174,6 +174,35 @@ body.dark .alt-bg {
     margin-bottom: 15px;
 }
 
+/* ===== TABLET BENEFITS GRID and ENGAGEMENT MODELS ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .benefit-card {
+        padding: 20px;
+    }
+
+    .engagement-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .engagement-card {
+        padding: 20px;
+    }
+
+    .highlight-card {
+        transform: none;
+    }
+
+    .engagement-card:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+
 /* ===== WORKING PROCESS TIMELINE ===== */
 .process-timeline {
     display: flex;
