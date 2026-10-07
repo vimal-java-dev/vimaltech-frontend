@@ -55,25 +55,22 @@
     </noscript>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/portfolio.css" />
+    <link rel="stylesheet" href="/css/portfolio.css">
     <!-- New CSS file below -->
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/dropdown.css" />
-    <link rel="stylesheet" href="/css/latest-works.css" />
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/latest-works.css">
     <!-- Reusing for the frontend grid -->
-    <link rel="stylesheet" href="/css/whatsapp-floating.css" />
+    <link rel="stylesheet" href="/css/whatsapp-floating.css">
 
     <!-- Open Graph (Social Sharing) -->
-    <meta
-      property="og:title"
-      content="Java Developer Expertise | Spring Boot, Microservices & Cloud"
-    />
+    <meta property="og:title" content="Vimal Tech | Portfolio & Case Studies" />
     <meta
       property="og:description"
-      content="Discover the technical stack and projects of Vimal Patel – backend development with Java, Spring Boot, Docker, AWS and modern web frameworks."
+      content="Explore frontend interfaces and backend case studies by Vimal Tech, featuring Java, Spring Boot, Microservices, REST APIs, Docker, and scalable architectures."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vimaltech.dev/expertise" />
+    <meta property="og:url" content="https://vimaltech.dev/portfolio" />
     <meta
       property="og:image"
       content="https://vimaltech.dev/images/logo-black.png"
@@ -114,7 +111,92 @@
       href="/images/favicon-16x16.png"
     />
 
-    <!-- Fonts -->
+    <!-- SEO SCHEMA: Portfolio Page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://vimaltech.dev/portfolio#webpage",
+            "url": "https://vimaltech.dev/portfolio",
+            "name": "Vimal Tech | Portfolio & Case Studies",
+            "description": "Explore the professional portfolio and in-depth backend case studies of Vimal Tech, featuring modern frontend interfaces, Java, Spring Boot, Microservices, REST APIs, Docker, and scalable backend architectures.",
+            "isPartOf": {
+              "@type": "WebSite",
+              "@id": "https://vimaltech.dev/#website",
+              "url": "https://vimaltech.dev/",
+              "name": "Vimal Tech"
+            },
+            "about": {
+              "@type": "Person",
+              "@id": "https://vimaltech.dev/#person",
+              "name": "Vimal Patel",
+              "url": "https://vimaltech.dev/"
+            },
+            "mainEntity": {
+              "@id": "https://vimaltech.dev/portfolio#portfolio"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "https://vimaltech.dev/portfolio#portfolio",
+            "name": "Vimal Tech Portfolio Projects and Case Studies",
+            "description": "Frontend interfaces and backend architecture case studies developed by Vimal Tech.",
+            "numberOfItems": 8,
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Sports Club",
+                "url": "https://sports-club-demo.vimaltech.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Crimson Cobalt Tailors",
+                "url": "https://crimson-cobalt-tailors-demo.vimaltech.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Swarnim Jewellers",
+                "url": "https://swarnim-jewellers-demo.vimaltech.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Hotel Inn",
+                "url": "https://hotel-inn-demo.vimaltech.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Nutrition Specialist",
+                "url": "https://nutrition-demo.vimaltech.dev/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "Data Streaming & Fleet Management"
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "name": "PTC Windchill (Java Product)"
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "name": "Smart Parking System"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
     <!-- Inter -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
