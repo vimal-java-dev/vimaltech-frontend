@@ -1,4 +1,4 @@
-# 🚀 Vimal Tech registered under MSME Micro, Small and Medium Enterprises.
+# 🚀 Vimal Tech : MSME Registered Micro Enterprise Under the Ministry of Government of India.
 
 > A modern, responsive, and SEO-optimized Java Dev MSME Virtual Office built using **HTML5**, **CSS3**, and **JavaScript**. Designed to showcase professional services, frontend projects, technical expertise, and contact information with a clean user experience and modern web development practices.
 
@@ -9,7 +9,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-success)
 ![SEO](https://img.shields.io/badge/SEO-Optimized-blue)
-![License](https://img.shields.io/badge/License-MSME-green)
+![Registered](https://img.shields.io/badge/Registered-MSME-green)
 
 </p>
 
