@@ -94,53 +94,71 @@ body.dark h3 {
 /* ===================================================
    ===== Common Navbar (Glassmorphic) =====
 =================================================== */
+/* ===== Navbar: Consistent Width on All Desktop Screens ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    gap: 0px;
     position: fixed;
     top: 5px;
-    left: 20px;
-    right: 20px;
+    left: 50%;
+    right: auto;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    transform: translateX(-50%);
     z-index: 1000;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-/* The styles that apply ONLY when scrolling down */
-
-/* Light Mode Glass Effect */
-/* .glass-nav {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-} */
-
-.glass-nav {
-    /* 1. Gives it a solid color */
-    /* background-color: #ffffff; */
-    background-color: transparent;
-    /* 2. Increased blur to a heavy but stable range */
-    /* backdrop-filter: blur(40px); */
-    /* -webkit-backdrop-filter: blur(40px); */
-
-    /* 3. Subtle border and shadow to define the edges */
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
-    /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
-
-    /* 4. Performance boost for heavy filters */
-    /* will-change: backdrop-filter; */
-
-    padding: 0.5rem 1rem;
+/* ===== Brand / Logo Group ===== */
+.navbar>div:first-child {
+    margin-right: 0;
+    flex: 0 0 auto;
 }
 
-.glass-nav.scrolled {
-    top: 10px;
-    left: 120px;
-    right: 120px;
+/* ===== Navigation Links ===== */
+.navbar .nav-links {
+    margin-left: auto;
+    margin-right: 0;
+    flex: 0 0 auto;
+}
+
+/* ===== Navbar: Initial State ===== */
+.glass-nav {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease,
+        border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Desktop Navbar: Scroll States ===== */
+/* ===== Shared Positioning for Both Scroll States ===== */
+nav.navbar.glass-nav.hero-scrolled,
+nav.navbar.glass-nav.scrolled {
+    left: 50%;
+    right: auto;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+}
+
+/* ===== First Scroll: Inside Hero Section ===== */
+nav.navbar.glass-nav.hero-scrolled {
+    background: #000000ec;
+    border: 1px solid transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* ===== Second Scroll: Beyond Hero Section ===== */
+nav.navbar.glass-nav.scrolled {
     /* Ensures smooth scrolling accounts for the navbar height */
     background: rgba(255, 255, 255, 0.3);
     /* Lowered opacity (0.3) so the blur is more visible */
@@ -209,7 +227,7 @@ body.dark .glass-nav.scrolled .nav-links li a:hover {
 }
 
 .logo {
-    height: 40px;
+    height: 32px;
     width: auto;
     object-fit: contain;
     /* Comment to make logo transparent and blend with the navbar background */
@@ -219,7 +237,7 @@ body.dark .glass-nav.scrolled .nav-links li a:hover {
 }
 
 .brand-name {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -236,11 +254,6 @@ body.dark .glass-nav.scrolled .nav-links li a:hover {
     text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.glass-nav.scrolled .brand-name-vimal {
-    transition: color 0.3s ease;
-    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
-}
-
 /* Add a hover effect for extra flair */
 .brand-name:hover {
     color: #000;
@@ -254,10 +267,12 @@ body.dark .brand-name:hover {
     transform: translateY(-2px);
 }
 
+/* ===== Brand Text: Scrolled Glass Navbar ===== */
 .glass-nav.scrolled .brand-name-vimal {
     color: #000000;
     /* Darker text for better contrast */
     transition: color 0.3s ease;
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 body.dark .glass-nav.scrolled .brand-name-vimal {
@@ -265,6 +280,7 @@ body.dark .glass-nav.scrolled .brand-name-vimal {
     /* Bright white for dark mode */
 }
 
+/* ===== Brand Text: Default White ===== */
 .brand-name-vimal {
     color: #ffffff;
     transition: color 0.3s ease;
@@ -278,20 +294,26 @@ body.dark .glass-nav.scrolled .brand-name-vimal {
     color: var(--color-primary);
 }
 
-/* Hamburger Menu Dropped in Desktop view */
-.hamburger {
-    display: none;
-}
-
-/* ===== Nav Links ===== */
+/* ===== Navigation Links ===== */
 .nav-links {
-    list-style: none;
     display: flex;
+    align-items: center;
     gap: 25px;
+    list-style: none;
+    margin-left: 180px;
+    padding: 0;
     font-family: "Outfit", sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
-    /* margin-right: 10px; */
+}
+
+/* ===== Hamburger: Hidden on Desktop ===== */
+.navbar>div:last-child {
+    display: none;
+}
+
+.hamburger {
+    display: none;
 }
 
 .nav-links li a {
@@ -374,6 +396,39 @@ body.dark nav.scrolled .hamburger {
    769px – 1024px
 ========================================= */
 @media (min-width: 769px) and (max-width: 1024px) {
+
+    nav.navbar.glass-nav,
+    nav.navbar.glass-nav.hero-scrolled,
+    nav.navbar.glass-nav.scrolled {
+        left: 15px;
+        right: 15px;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        transform: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .navbar>div:first-child {
+        margin-right: 0;
+        flex: 0 0 auto;
+    }
+
+    .navbar .brand {
+        flex-shrink: 0;
+    }
+
+    .navbar .nav-links {
+        margin-left: auto;
+        margin-right: 0;
+        flex: 0 1 auto;
+    }
+
     .hero-content {
         max-width: 750px;
         margin: auto;
@@ -401,27 +456,6 @@ body.dark nav.scrolled .hamburger {
     }
 
     /* ================================
-       NAVBAR
-    ================================ */
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        top: 10px;
-        left: 15px;
-        right: 15px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
-
-    .navbar.scrolled {
-        /* top: 10px; */
-        left: 20px;
-        right: 20px;
-    }
-
-    /* ================================
        BRAND
     ================================ */
     .brand {
@@ -444,7 +478,7 @@ body.dark nav.scrolled .hamburger {
         display: flex;
         gap: 6px;
         white-space: nowrap;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         transition: all 0.3s ease;
     }
 
@@ -545,15 +579,57 @@ body.dark nav.scrolled .hamburger {
    Up to 768px
 ========================================= */
 @media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.1rem 0.5rem;
-        top: 5px;
+
+    nav.navbar.glass-nav,
+    nav.navbar.glass-nav.hero-scrolled,
+    nav.navbar.glass-nav.scrolled {
         left: 10px;
         right: 10px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        padding: 0.35rem 0.75rem;
+        box-sizing: border-box;
+        transform: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .navbar>div:first-child {
+        margin-right: 0;
+        flex: 0 0 auto;
+    }
+
+    .navbar .brand {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .navbar .logo {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
+
+    .navbar .brand-name {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 4px;
+        white-space: nowrap;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+
+    .navbar .hamburger {
+        display: block;
+        flex: 0 0 auto;
+        margin-left: auto;
     }
 
     .navbar.scrolled {
@@ -571,27 +647,6 @@ body.dark nav.scrolled .hamburger {
         height: 30px;
         width: auto;
         object-fit: contain;
-    }
-
-    .brand-name {
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        font-display: block;
-        position: absolute;
-        /* Takes the text out of the normal flow */
-        left: 50%;
-        /* Pushes the left edge to the exact middle */
-        transform: translateX(-50%);
-        /* Pulls it back by half its own width for true centering */
-
-        /* Ensure the text is laid out nicely */
-        display: flex;
-        gap: 5px;
-
-        white-space: nowrap;
-        transition: all 0.3s ease;
-        font-size: 1.5rem;
-
     }
 
     /* Hamburger Menu */

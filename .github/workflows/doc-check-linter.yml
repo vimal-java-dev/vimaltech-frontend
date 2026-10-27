@@ -59,27 +59,12 @@ jobs:
 
           if [ -n "${{ secrets.GPG_PUBLIC_KEY_1 }}" ]; then
             echo "${{ secrets.GPG_PUBLIC_KEY_1 }}" | gpg --import
-            echo "✅ Imported GPG_PUBLIC_KEY_1"
+            echo "✅ Imported GPG_PUBLIC_KEY_1 (Contributor Account)"
           fi
 
           if [ -n "${{ secrets.GPG_PUBLIC_KEY_2 }}" ]; then
             echo "${{ secrets.GPG_PUBLIC_KEY_2 }}" | gpg --import
             echo "✅ Imported GPG_PUBLIC_KEY_2 (Contributor Account)"
-          fi
-
-          if [ -n "${{ secrets.GPG_PUBLIC_KEY_3 }}" ]; then
-            echo "${{ secrets.GPG_PUBLIC_KEY_3 }}" | gpg --import
-            echo "✅ Imported GPG_PUBLIC_KEY_3 (Contributor Account)"
-          fi
-
-          if [ -n "${{ secrets.GPG_PUBLIC_KEY_4 }}" ]; then
-            echo "${{ secrets.GPG_PUBLIC_KEY_4 }}" | gpg --import
-            echo "✅ Imported GPG_PUBLIC_KEY_4 (Contributor Account)"
-          fi
-
-          if [ -n "${{ secrets.GPG_PUBLIC_KEY_5 }}" ]; then
-            echo "${{ secrets.GPG_PUBLIC_KEY_5 }}" | gpg --import
-            echo "✅ Imported GPG_PUBLIC_KEY_5 (Contributor Account)"
           fi
 
       # ---------- Verify latest commit ----------
@@ -112,7 +97,7 @@ jobs:
             echo "🔑 Fingerprint: $FINGERPRINT"
 
             # Replaced the short ID with the full 40-character fingerprint
-            TRUSTED_KEYS="261CFF44C4FAFA769A4891463BAE437F39286F36 5CC01F41CD084AAC0593108DD432152833DA3244 A38379B51EB75EF1877A83ADBE677DAEFE33CB57 1606642895F688C9299B9E0AC97540DA6C9FA85C F5959E720D1C3DFACAD27E7588F6CD4E295C9062 97C68C42AB4DD4797FA5EB93E9A0198A7C7B3BD6"
+            TRUSTED_KEYS="261CFF44C4FAFA769A4891463BAE437F39286F36 DB132FC61BAE7350EA4F82D200BB565628B8821D 97C68C42AB4DD4797FA5EB93E9A0198A7C7B3BD6"
 
             if echo "$TRUSTED_KEYS" | grep -q "$FINGERPRINT"; then
               echo "✅ Trusted key"

@@ -202,32 +202,36 @@ function updateToggleIcon() {
 
 // --- 1. THE MASTER LOGO FUNCTION ---
 // This handles everything: Scroll position + Dark/Light mode
-function updateNavbarAndLogo() {
-  const navbar = document.querySelector("nav");
-  const logo = document.getElementById("site-logo");
-  if (!navbar || !logo) return;
 
-  const isScrolled = window.scrollY > 50;
+/* ===== Navbar Scroll and Logo Controller ===== */
+function updateNavbarAndLogo() {
+  const navbar = document.querySelector(".navbar");
+  const hero = document.querySelector(".hero");
+  const logo = document.getElementById("site-logo");
+
+  if (!navbar || !hero || !logo) return;
+
+  const scrollY = window.scrollY;
   const isDarkMode = document.body.classList.contains("dark");
 
-  // Handle Scroll Classes
-  if (isScrolled) {
-    navbar.classList.add("scrolled");
+  // State 1: At the top of the page
+  const isAtTop = scrollY <= 50;
 
-    // When Scrolled:
-    // Light mode = Solid white nav (needs black logo)
-    // Dark mode = Solid dark nav (needs white logo)
-    if (isDarkMode) {
-      logo.src = "/images/logo-white.png";
-    } else {
-      logo.src = "/images/logo-black.png";
-    }
-  } else {
-    navbar.classList.remove("scrolled");
+  // State 2: Scrolled, but still inside the hero section
+  const isHeroScrolled = !isAtTop && hero.getBoundingClientRect().bottom > 0;
 
-    // When at the Top:
-    // Nav is transparent, always use the white logo
+  // State 3: Scrolled beyond the hero section
+  const isPastHero = !isAtTop && hero.getBoundingClientRect().bottom <= 0;
+
+  // Apply the appropriate navbar state
+  navbar.classList.toggle("hero-scrolled", isHeroScrolled);
+  navbar.classList.toggle("scrolled", isPastHero);
+
+  // Keep the logo white until the hero section ends
+  if (!isPastHero || isDarkMode) {
     logo.src = "/images/logo-white.png";
+  } else {
+    logo.src = "/images/logo-black.png";
   }
 }
 
@@ -267,8 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
   updateNavbarAndLogo();
 
   // Listen for scrolling and update the logo/navbar dynamically
-  window.addEventListener("scroll", () => {
-    updateNavbarAndLogo();
+  // Update the navbar and logo while scrolling
+  window.addEventListener("scroll", updateNavbarAndLogo, {
+    passive: true,
   });
 
   // Checking if initParticles exists before calling it
