@@ -150,7 +150,13 @@ nav.navbar.glass-nav.scrolled {
 
 /* ===== First Scroll: Inside Hero Section ===== */
 nav.navbar.glass-nav.hero-scrolled {
-    background: #000000ec;
+    /* Primary base background color */
+    background-color: #0b0d10;
+
+    /* Replicating the subtle orange and green radial glows */
+    background-image:
+        radial-gradient(circle at 10% 90%, rgba(200, 100, 20, 0.15), transparent 45%),
+        radial-gradient(circle at 90% 10%, rgba(30, 80, 50, 0.15), transparent 45%);
     border: 1px solid transparent;
     box-shadow: none;
     backdrop-filter: none;
@@ -162,7 +168,7 @@ nav.navbar.glass-nav.scrolled {
     /* Ensures smooth scrolling accounts for the navbar height */
     background: rgba(255, 255, 255, 0.3);
     /* Lowered opacity (0.3) so the blur is more visible */
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(40px);
     /* Makes it slightly thinner */
 
